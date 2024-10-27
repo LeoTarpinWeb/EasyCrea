@@ -46,11 +46,14 @@ Voici un modèle de document spécifiant les consignes d’utilisation pour ton 
   - **Impact Finances** pour le choix 1 (valeur entière).
   - **Impact Population** pour le choix 2 (valeur entière).
   - **Impact Finances** pour le choix 2 (valeur entière).
-  
-- Chaque créateur peut soumettre **une seule carte** par deck :
+ 
+ - Chaque créateur peut soumettre **une seule carte** par deck :
   - **Si la carte a déjà été soumise** : La carte est affichée sous la section "**Votre carte dans ce deck**".
   - **Si le deck est plein** : Un message s'affiche indiquant que le deck est complet, et aucune autre carte ne peut être ajoutée.
 
+- Création de cartes par l'administrateur : Les créateurs ne peuvent voir un deck que si au moins une carte a été créée par un administrateur.
+ - Contrôle des dates : Les decks ne sont affichés que si leur date de début est en cours (c'est-à-dire que la date actuelle est égale ou supérieure à la - -     date de début) et que leur date de fin n'est pas dépassée.
+   
 #### 3. Modération des Cartes
 
 - Les administrateurs peuvent consulter chaque carte soumise d'un deck.

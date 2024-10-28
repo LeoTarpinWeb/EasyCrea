@@ -1,0 +1,331 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    overflow-x: hidden; /* Ajouté pour éviter le défilement horizontal */
+}
+
+
+header {
+    background-color: #4a4a9e;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+main {
+    padding: 1.5em;
+    background-color: white;
+    width: 90%; /* Gardez la largeur à 90% */
+    max-width: 100%; /* Empêche le débordement */
+    margin: 1.5em auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4a4a9e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.75em;
+}
+
+button:hover {
+    background-color: #35357b;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4a4a9e;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+a {
+    color: #4a4a9e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 2em auto;
+    text-align: center;
+    width: 90%;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.deck {
+    background-color: #f2f0fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #333;
+}
+
+.deck h2 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #6a0dad;
+}
+
+form {
+    background-color: #f2f0fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+form input[type="text"], form textarea, form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #530d9e;
+}
+
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.random-card {
+    background-color: #e0f7fa;
+    border: 1px solid #4a4a9e;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.random-card h3 {
+    color: #00796b;
+}
+
+.random-card p {
+    margin: 5px 0;
+}
+
+.created-card {
+    background-color: #f39ed2;
+    border: 1px solid #a0c4d4;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.created-card h3 {
+    color: #007bff;
+    margin: 0 0 10px;
+}
+
+.created-card strong {
+    color: #0056b3;
+}
+.table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Styles pour les lignes de tableau */
+.table-container table thead {
+    display: none; /* Masque l'en-tête en version mobile */
+}
+
+.table-container table tr {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Affichage des cellules */
+.table-container table td {
+    display: flex;
+    padding: 0.5em 0;
+}
+
+.table-container table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #4a4a9e;
+    margin-right: 1em;
+}
+
+
+/* Media Queries */
+@media (min-width: 600px) {
+    .container {
+        width: 80%;
+    }
+
+    header {
+        padding: 1.5em;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .deck h2 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+
+    header {
+        padding: 2em;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .deck h2 {
+        font-size: 26px;
+    }
+
+    main {
+        padding: 3em;
+    }
+    .table-container {
+        display: block;
+    }
+
+    .table-container table {
+        display: table;
+    }
+
+    .table-container table thead {
+        display: table-header-group;
+    }
+
+    .table-container table tr {
+        display: table-row;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .table-container table td {
+        display: table-cell;
+        padding: 10px;
+    }
+
+    .table-container table td::before {
+        content: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 60%;
+    }
+
+    header {
+        padding: 2.5em;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .deck h2 {
+        font-size: 28px;
+    }
+
+    main {
+        padding: 4em;
+    }
+}
